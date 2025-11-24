@@ -1,0 +1,38 @@
+<section id="sobre" class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <h2>Sobre a Interblock</h2>
+        <p class="lead">
+          Somos uma empresa especializada na fabricação de artefatos de cimento de alta qualidade,
+          atendendo desde pequenos projetos residenciais até grandes empreendimentos comerciais e industriais.
+        </p>
+        <p>
+          Nossa missão é fornecer produtos que combinam durabilidade, estética e sustentabilidade,
+          sempre com foco na satisfação total de nossos clientes.
+        </p>
+
+        <div class="highlights-grid">
+          <div *ngFor="let highlight of highlights" class="highlight-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>{{ highlight }}</span>
+          </div>
+        </div>      
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-container">
+          <div class="stats-grid-about">
+            <div *ngFor="let stat of stats" class="stat-box">
+              <div class="stat-number">{{ stat.value }}</div>
+              <div class="stat-text">{{ stat.label }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

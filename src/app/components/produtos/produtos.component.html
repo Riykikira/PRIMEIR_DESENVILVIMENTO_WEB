@@ -1,0 +1,37 @@
+<section id="produtos" class="products">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nossos Produtos</h2>
+      <p>Soluções em concreto que atendem aos mais altos padrões de qualidade e sustentabilidade</p>
+    </div>
+
+    <div class="products-grid">
+      <div *ngFor="let product of products" class="product-card">
+        <div class="product-image">
+          <img [src]="product.image" [alt]="product.title" />
+          <div class="product-icon">
+            <span>{{ product.icon }}</span>
+          </div>
+        </div>
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.description }}</p>
+        <button (click)="solicitarOrcamento(product.title)" class="btn-orcamento">
+          Solicitar Orçamento
+        </button>
+      </div>
+    </div>
+
+    <div class="products-image">
+      <div class="image-container">
+        <!-- image-placeholder -->
+        <div class="">
+            <!-- Produtos de Concreto -->
+          <span></span>
+        </div>
+      </div>
+      <div class="quality-badge">
+        <p>Todos os nossos produtos seguem rigorosos padrões de qualidade e normas técnicas.</p>
+      </div>
+    </div>
+  </div>
+</section>

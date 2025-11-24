@@ -1,0 +1,69 @@
+<section id="angular-tool" class="angular-tool">
+  <div class="container">
+    <div class="section-header">
+      <h2>Empresa referencia em construção civil</h2>
+      <p>A revolução na construção civil com tecnologia de ponta</p>
+    </div>
+
+    <div class="tool-grid">
+      <div class="tool-image">
+        <div class="image-wrapper">
+          <div class="image-placeholder">
+            <!-- Placeholder for angular tool image -->
+             
+           <img src="/assets/images/fotinha.jpg" width="700" alt="Descrição">
+           <div class="texto-sobreposto"> O bloco que constrói o seu futuro </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-content">
+        <div class="features-grid">
+          <div *ngFor="let feature of features" class="feature-card">
+            <div class="feature-icon">
+              <span>{{ feature.icon }}</span>
+            </div>
+            <div>
+              <h3>{{ feature.title }}</h3>
+              <p>{{ feature.description }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="specs-section">
+          <h4>
+            <svg 
+              width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Especificações Técnicas
+          </h4>
+          <ul>
+            <li *ngFor="let spec of specs">
+              <div class="spec-bullet"></div>
+              {{ spec }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="tool-actions">
+          <button class="btn btn-accent btn-lg">
+            Solicitar Orçamento
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </button>
+          <button class="btn btn-outline btn-lg">Ver Especificações Completas</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div *ngFor="let stat of stats" class="stat-card">
+        <div class="stat-value">{{ stat.value }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+    </div>
+  </div>
+</section>

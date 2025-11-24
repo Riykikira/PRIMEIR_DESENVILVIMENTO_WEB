@@ -1,0 +1,87 @@
+.about {
+  padding: 6rem 0;
+  background-color: var(--background);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.about-content .lead {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.highlight-item svg {
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.highlight-item span {
+  color: var(--foreground);
+}
+
+.stats-container {
+  background: hsla(210, 10%, 88%, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 2px solid var(--concrete-light);
+}
+
+.stats-grid-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.stat-box {
+  text-align: center;
+}
+/*  esse aqui é a parte de estilo de numero */
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.stat-text {
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 768px) {
+  .stats-grid-about {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

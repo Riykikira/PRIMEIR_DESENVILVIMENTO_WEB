@@ -1,0 +1,403 @@
+.logado-page {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+/* Header */
+.logado-header {
+  background: linear-gradient(135deg, #cc0000, #ff3333);
+  color: var(--primary-foreground);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem;
+}
+
+.header-title {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.header-title h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--primary-foreground);
+}
+
+.header-title p {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 0.375rem;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--primary-foreground);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Main Content */
+.logado-main {
+  padding: 3rem 1rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Empresa Info */
+.empresa-info {
+  margin-bottom: 3rem;
+  animation: fade-in 0.8s ease-out;
+}
+
+.empresa-info h2 {
+  color: var(--primary);
+  font-size: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+
+.info-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.info-label {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Dashboard */
+.dashboard {
+  margin-bottom: 3rem;
+  animation: fade-in 0.8s ease-out 0.1s backwards;
+}
+
+.dashboard h2 {
+  color: var(--primary);
+  font-size: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.dashboard-card {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #cc0000, #ff3333);
+}
+
+.dashboard-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-header h3 {
+  font-size: 1rem;
+  color: var(--foreground);
+  margin: 0;
+  font-weight: 600;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+  stroke-width: 2;
+}
+
+.card-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+.notas-list {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.nota-item {
+  font-size: 0.875rem;
+  color: var(--accent);
+  padding: 0.25rem 0;
+  margin: 0;
+}
+
+/* Notas Detalhes */
+.notas-detalhes {
+  margin-bottom: 3rem;
+  animation: fade-in 0.8s ease-out 0.2s backwards;
+}
+
+.notas-detalhes h2 {
+  color: var(--primary);
+  font-size: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.table-container {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.notas-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.notas-table thead {
+  background: linear-gradient(135deg, var(--concrete-light), var(--secondary));
+  border-bottom: 2px solid var(--border);
+}
+
+.notas-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.notas-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.notas-table tbody tr {
+  transition: all 0.2s;
+}
+
+.notas-table tbody tr:hover {
+  background-color: var(--secondary);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-success {
+  background: linear-gradient(135deg, var(--concrete), var(--accent));
+  color: var(--primary-foreground);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logado-main {
+    padding: 2rem 1rem;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .header-title {
+    flex: 1 1 auto;
+    margin-left: 0;
+    order: 3;
+    width: 100%;
+  }
+
+  .header-title h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-title p {
+    font-size: 0.75rem;
+  }
+
+  .header-actions {
+    order: 2;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .empresa-info h2,
+  .dashboard h2,
+  .notas-detalhes h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-value {
+    font-size: 2rem;
+  }
+
+  .notas-table {
+    font-size: 0.75rem;
+  }
+
+  .notas-table th,
+  .notas-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logado-header {
+    padding: 1rem 0;
+  }
+
+  .header-container {
+    padding: 0 0.75rem;
+  }
+
+  .header-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-title h1 {
+    font-size: 1rem;
+  }
+
+  .header-title p {
+    display: none;
+  }
+
+  .logado-main {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .empresa-info h2,
+  .dashboard h2,
+  .notas-detalhes h2 {
+    font-size: 1.25rem;
+  }
+
+  .card-value {
+    font-size: 1.75rem;
+  }
+
+  .dashboard-card {
+    padding: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1rem;
+  }
+}

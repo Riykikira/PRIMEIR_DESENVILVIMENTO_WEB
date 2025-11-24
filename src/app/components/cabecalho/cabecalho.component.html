@@ -1,0 +1,42 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+        <!-- CABEÇALHO PRINCIPAL -->
+      <div class="logo">
+        <a routerLink="/" class="logo-link">
+          <div class="logo-icon">
+          <img src="http://www.interblock.ind.br/images/Logo-Interblock.png" alt="Logo Interblock" width="145" />
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-desktop" [class.active]="menuOpen">
+        <a href="#home" class="nav-link" (click)="closeMenu()">Início</a>
+        <a href="#produtos" class="nav-link" (click)="closeMenu()">Produtos</a>
+        <a href="#sobre" class="nav-link" (click)="closeMenu()">Sobre</a>
+        <a href="#projetos" class="nav-link" (click)="closeMenu()">Projetos</a>
+        <a href="#contato" class="nav-link" (click)="closeMenu()">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a routerLink="/auth" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          Fazer Login       
+        </a>
+        <button class="btn btn-primary">Solicitar Orçamento</button>
+      </div>
+
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

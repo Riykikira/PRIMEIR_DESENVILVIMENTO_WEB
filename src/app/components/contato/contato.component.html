@@ -1,0 +1,120 @@
+<section id="contato" class="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>Entre em Contato</h2>
+      <p>Estamos prontos para atender seu projeto. Fale conosco!</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Informações de Contato</h3>
+
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <h4>Endereço</h4>
+              <p>
+                 Rodovia BR-101 SN<br>
+                KM 101, Zona Rural, Alhandra - PB, CEP 58320-000
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Telefone</h4>
+              <p> 
+                (83) 9122-1413<br>
+                (83) 9139-3649
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>
+                rh@interblock.com.br.ind<br>
+                financeiro@interblock.com.br.ind
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-box">
+          <h4>Horário de Atendimento</h4>
+          <p>
+            Segunda a quinta: 7h às 17h<br>
+            Sexta: 7h às 16h
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <h3>Solicite um Orçamento</h3>
+
+        <form (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="input"
+              placeholder="Seu nome"
+              [(ngModel)]="formData.name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="input"
+              placeholder="Seu email"
+              [(ngModel)]="formData.email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="tel"
+              class="input"
+              placeholder="Seu telefone"
+              [(ngModel)]="formData.phone"
+              name="phone"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              class="textarea"
+              placeholder="Descreva seu projeto e necessidades"
+              [(ngModel)]="formData.message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
