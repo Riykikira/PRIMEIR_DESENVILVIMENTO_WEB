@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
-import { AuthService, EmpresaLogin } from '../services/auth.service';
+import { AuthService, EmpresaLogin } from '../../services/auth.service';
 
 /**
  * COMPONENTE DE DASHBOARD LOGADO (LogadoComponent)

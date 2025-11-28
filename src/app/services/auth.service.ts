@@ -11,7 +11,7 @@ export interface EmpresaLogin {
   nomeEmpresa?: string;                   // Nome fantasia da empresa
   saldoBlocos?: number;                   // Quantidade de blocos disponíveis em estoque
   quantidadePedidos?: number;             // Total de pedidos realizados
-  numeroNotasFiscais?: number[];          // Array com números das notas fiscais
+  numeroNotasFiscais?: string[];          // Array com números das notas fiscais
   quantidadeEntregas?: number;            // Total de entregas realizadas
   notasDevolvidas?: number;               // Total de notas devolvidas
 }
@@ -62,9 +62,9 @@ export class AuthService {
       saldoBlocos: Math.floor(Math.random() * 5000) + 1000,  // Entre 1000 e 6000 blocos
       quantidadePedidos: Math.floor(Math.random() * 50) + 5,  // Entre 5 e 55 pedidos
       numeroNotasFiscais: [
-        Math.floor(Math.random() * 10000),  // Número aleatório para NF 1
-        Math.floor(Math.random() * 10000),  // Número aleatório para NF 2
-        Math.floor(Math.random() * 10000)   // Número aleatório para NF 3
+        String(Math.floor(Math.random() * 1000000)),
+        String(Math.floor(Math.random() * 1000000)),
+        String(Math.floor(Math.random() * 1000000))
       ],
       quantidadeEntregas: Math.floor(Math.random() * 30) + 10,  // Entre 10 e 40 entregas
       notasDevolvidas: Math.floor(Math.random() * 5)  // Entre 0 e 4 devoluções
