@@ -1,0 +1,55 @@
+<section id="catalogo" class="catalogo">
+  <div class="container">
+    <div class="section-header">
+      <h2>Catálogo de Produtos</h2>
+      <p>Conheça todas as especificações e características de nossos produtos</p>
+    </div>
+
+    <!-- Filtros por Categoria -->
+    <div class="categoria-filter">
+      <button 
+        *ngFor="let categoria of categorias"
+        [class.active]="categoriaAtiva === categoria.id"
+        (click)="filtrarCategoria(categoria.id)"
+        class="categoria-btn">
+        {{ categoria.nome }}
+      </button>
+    </div>
+
+    <!-- Grid de Produtos -->
+    <div class="catalogo-content">
+      <div class="product-grid">
+        <div *ngFor="let produto of produtosFiltrados" class="product-card">
+          <div class="product-image">
+            <img [src]="produto.imagem" [alt]="produto.nome">
+            <span class="product-badge">{{ produto.categoria | titlecase }}</span>
+          </div>
+          <div class="product-info">
+            <h3>{{ produto.nome }}</h3>
+            <p class="product-description">{{ produto.descricao }}</p>
+            <div class="product-specs">
+              <div class="spec-item">
+                <span class="spec-label">Resistência:</span>
+                <span class="spec-value">{{ produto.resistencia }}</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Dimensões:</span>
+                <span class="spec-value">{{ produto.dimensoes }}</span>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-price">{{ produto.preco }}</span>
+              <button class="btn-details">Ver Detalhes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mensagem quando não há produtos -->
+      <div *ngIf="produtosFiltrados.length === 0" class="empty-state">
+        <p>Nenhum produto encontrado nesta categoria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+

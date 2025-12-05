@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface Feature {
   icon: string;
@@ -15,7 +16,9 @@ interface Feature {
   styleUrls: ['./ferramenta-angular.component.css']
 })
 export class FerramentaAngularComponent {
+  constructor(private router: Router) { }
   features: Feature[] = [
+  
     {
       icon: 'ruler',
       title: 'Precisão Absoluta',
@@ -46,4 +49,8 @@ export class FerramentaAngularComponent {
     { value: '10 anos', label: 'Garantia' },
     { value: '10k+', label: 'Obras Realizadas' }
   ];
+
+  verEspecificacoes() {
+    this.router.navigate(['/catalogo']);
+  }
 }

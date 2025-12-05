@@ -11,7 +11,7 @@
           <div class="image-placeholder">
             <!-- Placeholder for angular tool image -->
              
-           <img src="/assets/images/fotinha.jpg" width="700" alt="Descrição">
+           <img src="https://www.perplan.com.br/blog/wp-content/uploads/2020/03/19_10_2018-homenagem_dia_trabalhador_construcao_707x404.jpg" width="700" alt="Descrição">
            <div class="texto-sobreposto"> O bloco que constrói o seu futuro </div>
           
           </div>
@@ -51,10 +51,14 @@
           <button class="btn btn-accent btn-lg">
             Solicitar Orçamento
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
           </button>
-          <button class="btn btn-outline btn-lg">Ver Especificações Completas</button>
+          
+          <button (click)="verEspecificacoes()" class="btn btn-accent btn-lg">
+            Ver Especificações
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            </svg>
+          </button>
         </div>
       </div>
     </div>

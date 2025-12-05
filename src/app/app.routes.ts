@@ -3,6 +3,7 @@ import { HomeComponent } from './paginas/inicio/home.component';
 import { AuthComponent } from './paginas/autenticacao/auth.component';
 import { NotFoundComponent } from './paginas/nao-encontrado/not-found.component';
 import { LogadoComponent } from './components/logado/logado.component';
+import { CatalogoComponent } from './components/catalogo/catalogo.component';
 
 
 export const routes: Routes = [
@@ -15,6 +16,11 @@ export const routes: Routes = [
     path: 'auth',
     component: AuthComponent,
     title: 'Login / Cadastro - Interblock'
+  },
+  {
+    path: 'catalogo',
+    component: CatalogoComponent,
+    title: 'Catálogo de Produtos - Interblock'
   },
   {
  
