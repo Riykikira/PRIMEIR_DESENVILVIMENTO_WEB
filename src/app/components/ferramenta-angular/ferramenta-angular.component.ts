@@ -52,5 +52,7 @@ export class FerramentaAngularComponent {
 
   verEspecificacoes() {
     this.router.navigate(['/catalogo']);
+
   }
+  
 }
