@@ -10,4 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class RodapeComponent {
   currentYear = new Date().getFullYear();
+  instagramUrl = "https://www.instagram.com/interblockartefatos/";
+facebookUrl = "#";
+
 }

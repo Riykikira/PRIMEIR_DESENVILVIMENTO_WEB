@@ -18,19 +18,19 @@ interface Project {
 export class ProjetosComponent {
   projects: Project[] = [
     {
-      title: 'Condomínio Residencial Premium',
-      category: 'Residencial',
-      image: 'https://img.olx.com.br/images/42/424500825684203.webp'
+      title: 'Elizabeth Cimentos',
+      category: 'industrial',
+      image: 'https://static.paraiba.pb.gov.br/2014/02/20.01.14-polo-cimenteiro_Fotos-aereas_fotos_Chic%C3%B3-Moura-2.jpg'
     },
     {
-      title: 'Centro Comercial Moderno',
+      title: 'Centro De convenções',
       category: 'Comercial',
-      image: 'https://s2-g1.glbimg.com/QnnLaMiweDuLNYMLk0tn9aavDCI=/0x0:2000x1333/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/2/V/Rj2N5UQxy3Nzbs5AAEbA/foto-1.jpg'
+      image: 'https://www.a12.com/source/files/originals/Centro_de_Convencoes_-_Joao_Pessoa-536531.jpg'
     },
     {
-      title: 'Complexo Industrial',
+      title: 'Fábrica Da Geep',
       category: 'Industrial',
-      image: 'https://www.dinizengenharia.com.br/imagens/informacoes/empresa-engenharia-civil-recife-01.jpg'
+      image: 'https://stellantis3.dam-broadcast.com/medias/domain12808/media102746/824014-7qq703s6be-whr.jpg'
     }
   ];
 }

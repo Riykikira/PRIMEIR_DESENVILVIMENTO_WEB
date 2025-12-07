@@ -11,7 +11,7 @@
           <div class="image-placeholder">
             <!-- Placeholder for angular tool image -->
              
-           <img src="\assets\images\foto.png" width="600" alt="Descrição">
+           <img src="/assets/images/foto.png" width="600" alt="Descrição">
            <div class="texto-sobreposto"> O bloco que constrói o seu futuro </div>
           
           </div>
@@ -47,10 +47,12 @@
           </ul>
         </div>
 
-        <div class="tool-actions">
-          <button class="btn btn-accent btn-lg">
+        <div class="buttons-container">
+          <button (click)="solicitarOrcamentoGeral()" class="btn btn-accent btn-lg">
             Solicitar Orçamento
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </button>
           
@@ -62,7 +64,6 @@
         </div>
       </div>
     </div>
-
     <div class="stats-grid">
       <div *ngFor="let stat of stats" class="stat-card">
         <div class="stat-value">{{ stat.value }}</div>

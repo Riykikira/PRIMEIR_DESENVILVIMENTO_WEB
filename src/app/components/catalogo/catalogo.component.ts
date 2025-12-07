@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { OrcamentoService } from '../../services/orcamento.service';
+import { ContatoComponent } from '../contato/contato.component';
+import { CabecalhoComponent } from "../cabecalho/cabecalho.component";
 
 interface Produto {
   id: number;
@@ -15,19 +18,20 @@ interface Produto {
 @Component({
   selector: 'app-catalogo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ContatoComponent, CabecalhoComponent],
   templateUrl: './catalogo.component.html',
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent {
+  private orcamentoService = inject(OrcamentoService);
   categoriaAtiva: string = 'todos';
   
   categorias = [
     { id: 'todos', nome: 'Todos os Produtos' },
     { id: 'estrutural', nome: 'Blocos Estruturais' },
-    { id: 'vedacao', nome: 'Blocos de Vedação' },
+    { id: 'vedação', nome: 'Blocos de Vedação' },
     { id: 'decorativo', nome: 'Blocos Decorativos' },
-    { id: 'lajes', nome: 'Lajes Pré-moldadas' }
+    { id: 'lajes', nome: 'Lajes Pré-moldadas ' }
   ];
 
   produtos: Produto[] = [
@@ -94,7 +98,7 @@ export class CatalogoComponent {
     },
     {
       id: 7,
-      nome: 'MEEIO',
+      nome: '',
       categoria: 'lajes',
       descricao: 'Laje pré-moldada para pisos e coberturas',
       resistencia: '8 MPa',
@@ -102,17 +106,30 @@ export class CatalogoComponent {
       preco: 'R$ 45,00',
       imagem: 'https://via.placeholder.com/300x200?text=Laje+Padrao'
     },
-    {
-      id: 8,
-      nome: 'Laje Pré-moldada Reforçada',
-      categoria: 'lajes',
-      descricao: 'Laje reforçada para vãos maiores',
-      resistencia: '10 MPa',
-      dimensoes: 'Espessura: 15 cm',
-      preco: 'R$ 60,00',
-      imagem: 'https://via.placeholder.com/300x200?text=Laje+Reforcada'
-    }
-  ];
+  {
+    id: 8,
+    nome: 'Laje Pré-moldada Reforçada',
+    categoria: 'lajes',
+    descricao: '#',
+    resistencia: '10 MPa',
+    dimensoes: 'Espessura: 15 cm',
+    preco: 'R$ 99,00',
+    imagem: 'https://via.placeholder.com/300x200?text=Laje+Reforcada'
+  },
+  
+  {
+    id: 9,
+    nome: '#',
+    categoria: 'lajes',
+    descricao: 'Laje reforçada para vãos maiores',
+    resistencia: '10 MPa',
+    dimensoes: 'Espessura: 15 cm',
+    preco: 'R$ 60,00',
+    imagem: 'https://via.placeholder.com/300x200?text=Laje+Reforcada'
+  }
+  
+];
+
 
   get produtosFiltrados() {
     if (this.categoriaAtiva === 'todos') {
@@ -124,5 +141,12 @@ export class CatalogoComponent {
   filtrarCategoria(categoria: string) {
     this.categoriaAtiva = categoria;
   }
-}
 
+  solicitarOrcamento(nomeProduto: string): void {
+    this.orcamentoService.solicitarOrcamento(nomeProduto);
+  }
+
+  solicitarOrcamentoGeral() {
+    window.location.href = '#contato';
+  }
+}

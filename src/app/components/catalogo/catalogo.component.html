@@ -37,9 +37,16 @@
                 <span class="spec-value">{{ produto.dimensoes }}</span>
               </div>
             </div>
-            <div class="product-footer">
-              <span class="product-price">{{ produto.preco }}</span>
+            <div class="product-price-section">{{ produto.preco }}</div>
+            <div class="product-buttons">
               <button class="btn-details">Ver Detalhes</button>
+              <button (click)="solicitarOrcamento(produto.nome)" class="btn btn-accent btn-lg">
+                Solicitar Orçamento
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -47,9 +54,11 @@
 
       <!-- Mensagem quando não há produtos -->
       <div *ngIf="produtosFiltrados.length === 0" class="empty-state">
-        <p>Nenhum produto encontrado nesta categoria.</p>
+        <p>Ops, ainda não temos produtos nesta categoria.</p>
       </div>
     </div>
   </div>
 </section>
+
+<app-contato></app-contato>
 

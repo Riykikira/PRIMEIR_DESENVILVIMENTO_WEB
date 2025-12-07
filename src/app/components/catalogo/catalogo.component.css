@@ -192,22 +192,47 @@
 
 .product-price {
   font-size: 1.2rem;
-  color: #27ae60;
+  color: #000000;
   font-weight: 700;
+}
+
+.product-price-section {
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.product-buttons {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0rem;
+}
+
+.product-buttons .btn-details {
+  flex: 1;
+}
+
+.product-buttons button {
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  height: auto;
+  position: relative;
 }
 
 .btn-details {
   background: linear-gradient(135deg, #717b81 0%, #717b81 100%);
   color: white;
   border: none;
-  padding: 10px 16px;
+  padding: 8px 12px;
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
   flex-shrink: 0;
+  display: flex;
 }
 
 .btn-details:hover {
