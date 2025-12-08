@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { OrcamentoService } from '../../services/orcamento.service';
 import { ContatoComponent } from '../contato/contato.component';
 import { CabecalhoComponent } from "../cabecalho/cabecalho.component";
+import { RodapeComponent } from "../rodape/rodape.component";
 
 interface Produto {
   id: number;
@@ -18,13 +19,15 @@ interface Produto {
 @Component({
   selector: 'app-catalogo',
   standalone: true,
-  imports: [CommonModule, ContatoComponent, CabecalhoComponent],
+  imports: [CommonModule, ContatoComponent, CabecalhoComponent, RodapeComponent],
   templateUrl: './catalogo.component.html',
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent {
   private orcamentoService = inject(OrcamentoService);
   categoriaAtiva: string = 'todos';
+  produtoSelecionado: Produto | null = null;
+  modalAberto = false;
   
   categorias = [
     { id: 'todos', nome: 'Todos os Produtos' },
@@ -144,6 +147,16 @@ export class CatalogoComponent {
 
   solicitarOrcamento(nomeProduto: string): void {
     this.orcamentoService.solicitarOrcamento(nomeProduto);
+  }
+
+  verDetalhes(produto: Produto): void {
+    this.produtoSelecionado = produto;
+    this.modalAberto = true;
+  }
+
+  fecharModal(): void {
+    this.modalAberto = false;
+    this.produtoSelecionado = null;
   }
 
   solicitarOrcamentoGeral() {

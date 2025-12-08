@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {} from '../../services/orcamento.service';
+
 @Component({
   selector: 'app-heroi',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './heroi.component.html',
   styleUrls: ['./heroi.component.css']
+  
 })
 export class HeroiComponent {
-contato() {
-throw new Error('Method not implemented.');
-}
+  private numeroTelefone = '558391877515';
+
+  contato(): void {
+    const mensagem = 'Olá! Gostaria de conhecer mais sobre os produtos da Interblock.';
+    const linkWhatsapp = `https://wa.me/${this.numeroTelefone}?text=${encodeURIComponent(mensagem)}`;
+    window.open(linkWhatsapp, '_blank');
+  }
+
+
 }

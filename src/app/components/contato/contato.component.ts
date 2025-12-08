@@ -33,7 +33,7 @@ onSubmit(): void {
        alert('Por favor, preencha pelo menos nome e telefone.');
        return;
     }
-    const numeroTelefone = '558393045723'; 
+    const numeroTelefone = '558391877515'; 
     const mensagem = `
 Olá! Gostaria de solicitar um orçamento/contato.
 

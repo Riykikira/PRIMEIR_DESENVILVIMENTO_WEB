@@ -39,7 +39,7 @@
             </div>
             <div class="product-price-section">{{ produto.preco }}</div>
             <div class="product-buttons">
-              <button class="btn-details">Ver Detalhes</button>
+              <button (click)="verDetalhes(produto)" class="btn-details">Ver Detalhes</button>
               <button (click)="solicitarOrcamento(produto.nome)" class="btn btn-accent btn-lg">
                 Solicitar Orçamento
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -60,5 +60,56 @@
   </div>
 </section>
 
+<!-- Modal de Detalhes -->
+<div *ngIf="modalAberto" class="modal-overlay" (click)="fecharModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="modal-close" (click)="fecharModal()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <div class="modal-body" *ngIf="produtoSelecionado">
+      <div class="modal-image">
+        <img [src]="produtoSelecionado.imagem" [alt]="produtoSelecionado.nome">
+      </div>
+      
+      <div class="modal-info">
+        <h2>{{ produtoSelecionado.nome }}</h2>
+        <p class="modal-description">{{ produtoSelecionado.descricao }}</p>
+        
+        <div class="modal-specs">
+          <div class="spec-group">
+            <h4>Especificações</h4>
+            <div class="spec">
+              <span class="label">Resistência:</span>
+              <span class="value">{{ produtoSelecionado.resistencia }}</span>
+            </div>
+            <div class="spec">
+              <span class="label">Dimensões:</span>
+              <span class="value">{{ produtoSelecionado.dimensoes }}</span>
+            </div>
+            <div class="spec">
+              <span class="label">Preço:</span>
+              <span class="value">{{ produtoSelecionado.preco }}</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-actions">
+          <button (click)="solicitarOrcamento(produtoSelecionado.nome)" class="btn btn-accent btn-lg">
+            Solicitar Orçamento
+          </button>
+          <button (click)="fecharModal()" class="btn btn-outline">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <app-contato></app-contato>
+<app-rodape ></app-rodape>
 
