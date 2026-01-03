@@ -19,7 +19,8 @@ export class AuthComponent {
   loading = false;
 
   formData = {
-    email: '',
+    // Alteração: Mudado de email para cpfCnpj, caso futuramente mude o metodo de login, precisa ser alterado aqui também
+    cpfCnpj: '',
     password: '',
     confirmPassword: '',
     fullName: ''
@@ -28,7 +29,7 @@ export class AuthComponent {
   toggleMode(): void {
     this.isLogin = !this.isLogin;
     this.formData = {
-      email: '',
+      cpfCnpj: '',
       password: '',
       confirmPassword: '',
       fullName: ''
@@ -44,7 +45,7 @@ export class AuthComponent {
   }
 
   handleLogin(): void {
-    if (!this.formData.email || !this.formData.password) {
+    if (!this.formData.cpfCnpj || !this.formData.password) {
       alert('Por favor, preencha todos os campos');
       return;
     }
@@ -52,7 +53,7 @@ export class AuthComponent {
     this.loading = true;
     
     setTimeout(() => {
-      this.authService.login(this.formData.email, this.formData.password);
+      this.authService.login(this.formData.cpfCnpj, this.formData.password);
       
       this.loading = false;
       
