@@ -35,7 +35,7 @@ onSubmit(): void {
     }
     const numeroTelefone = '5583991877515'; 
     const mensagem = `
-Olá! Gostaria de solicitar um orçamento/contato.
+Olá! Gostaria de solicitar um orçamento para o meu projeto.
 
 Dados do Cliente:
  Nome: ${this.formData.name}
