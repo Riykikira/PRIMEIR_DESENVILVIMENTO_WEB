@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// Alteração: Importado RouterLink para permitir navegação por roteamento no template
+import { RouterLink } from '@angular/router';
 import { CatalogoComponent } from '../catalogo/catalogo.component';
 
 @Component({
   selector: 'app-heroi',
   standalone: true,
-  imports: [CommonModule],
+  // Alteração: Adicionado RouterLink aos imports para usar routerLink no template
+  imports: [CommonModule, RouterLink],
   templateUrl: './heroi.component.html',
   styleUrls: ['./heroi.component.css']
   
