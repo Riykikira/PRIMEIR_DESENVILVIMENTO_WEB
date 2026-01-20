@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importante para *ngFor e *ngIf em Standalone ou adicione no Module
 import { HeroiComponent } from '../heroi/heroi.component';
+import { ContatoComponent } from '../contato/contato.component';
 interface Slide {
   image: string;
   title: string;
@@ -16,22 +17,24 @@ interface Slide {
   templateUrl: './hero-carousel.html',
   styleUrls: ['./hero-carousel.css']
 })
+
 export class HeroCarouselComponent implements OnInit, OnDestroy {
  
   slides: Slide[] = [
     {
-      image: 'https://images.unsplash.com/photo-1590082725838-8c1d3c05423f?q=80&w=1920&auto=format&fit=crop', // Imagem exemplo de blocos
+      image: '', // Imagem exemplo de blocos
       title: 'A qualidade que você merece',
-      subtitle: 'Só a Paraíba Blocos oferece o melhor custo-benefício do mercado',
+      subtitle: 'Só na Interblock você encontra os melhores blocos de concreto',
       ctaText: 'Quero fazer o meu pedido',
-      ctaLink: '#'
+      ctaLink: ''
     },
+    
     {
-      image: 'https://images.unsplash.com/photo-1517646331032-9e8563c523a1?q=80&w=1920&auto=format&fit=crop', // Imagem exemplo 2
-      title: 'Construa com segurança',
+      image: '', // Imagem exemplo 2
+      title: 'qualidade e resistência',
       subtitle: 'Entregamos em toda a região com agilidade',
       ctaText: 'Solicitar Orçamento',
-      ctaLink: '#'
+      ctaLink: ''
     }
   ];
 
